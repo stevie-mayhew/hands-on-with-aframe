@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js"></script>
+	<title>Hands on with A-Frame</title>
+	<script>
+		var number = 1;
+
+		const skys = {
+		    1: '#sky-one',
+		    2: '#sky-two',
+		    3: '#sky-three',
+		    4: '#sky-four',
+		};
+
+		document.addEventListener('DOMContentLoaded', function init() {
+			window.addEventListener('keydown', function event(e) {
+			    if (number == 4) {
+			        number = 1;
+				} else {
+			        number++;
+				}
+				var sky = document.querySelector(`#sky-image`);
+				sky.setAttribute('src', skys[number]);
+			});
+			window.addEventListener('touchstart', function event(e) {
+			    if (number == 4) {
+			        number = 1;
+				} else {
+			        number++;
+				}
+				var sky = document.querySelector(`#sky-image`);
+				sky.setAttribute('src', skys[number]);
+			});
+		});
+
+	</script>
+</head>
+<body>
+<a-scene>
+	<a-assets>
+		<img id="sky-one" src="/images/examples/sky-one.jpg">
+		<img id="sky-two" src="/images/examples/sky-two.jpg">
+		<img id="sky-three" src="/images/examples/sky-three.jpg">
+		<img id="sky-four" src="/images/examples/sky-four.jpg">
+	</a-assets>
+	<a-sky id="sky-image" src="#sky-one"></a-sky>
+</a-scene>
+</body>
+</html>
+

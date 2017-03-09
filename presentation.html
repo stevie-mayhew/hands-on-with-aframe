@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="/production/js/main.js"></script>
+	<title>Hands on with A-Frame</title>
+</head>
+<body>
+<a-scene>
+	<a-sky src="#sky"></a-sky>
+	<a-entity id="camera"
+			  camera
+			  gamepad-controls
+			  position="0 3.8 0"
+			  rotation="270 270 90"></a-entity>
+	<a-assets>
+		<img id="stevie" src="/images/examples/stevie.png" />
+		<img id="sky" src="/images/examples/sky-one.jpg" />
+		<a-asset-item id="tree1" src="/images/examples/tree1.dae"></a-asset-item>
+		<a-asset-item id="tree2" src="/images/examples/tree2.dae"></a-asset-item>
+		<a-asset-item id="crate-mtl" src="/images/examples/crate.mtl"></a-asset-item>
+		<a-asset-item id="crate-obj" src="/images/examples/crate.obj"></a-asset-item>
+		<a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+		<img id="slide-1-stevie" src="/images/1-stevie.png">
+		<img id="slide-2-topics" src="/images/2-topics.png">
+		<img id="slide-3-what-is-vr" src="/images/3-what-is-vr.png">
+		<img id="slide-4-what-is-vr-2" src="/images/4-what-is-vr-2.png">
+		<img id="slide-5-what-is-vr-3" src="/images/5-what-is-vr-3.png">
+		<img id="slide-6-why-i-love" src="/images/6-why-i-love.png">
+		<img id="slide-7-web-sharing" src="/images/7-web-sharing.png">
+		<img id="slide-8-vr-allows" src="/images/8-vr-allows.png">
+		<img id="slide-9-imagination-in-your" src="/images/9-imagination-in-your.png">
+		<img id="slide-10-imagination-on-heads" src="/images/10-imagination-on-heads.png">
+		<img id="slide-11-getting-here" src="/images/11-getting-here.png">
+		<img id="slide-12-science-fiction" src="/images/12-science-fiction.png">
+		<img id="slide-13-some-non-vr" src="/images/13-some-non-vr.png">
+		<img id="slide-14-viewmaster" src="/images/14-viewmaster.png">
+		<img id="slide-15-science-fact" src="/images/15-science-fact.png">
+		<img id="slide-16-damocles" src="/images/16-damocles.png">
+		<img id="slide-17-more-history" src="/images/17-more-history.png">
+		<img id="slide-18-vr-on-web" src="/images/18-vr-on-web.png">
+		<img id="slide-19-vrml" src="/images/19-vrml.png">
+		<img id="slide-20-x3d" src="/images/20-x3d.png">
+		<img id="slide-21-o3d" src="/images/21-o3d.png">
+		<img id="slide-22-webgl" src="/images/22-webgl.png">
+		<img id="slide-23-glam" src="/images/23-glam.png">
+		<img id="slide-24-react-vr" src="/images/24-react-vr.png">
+		<img id="slide-25-i-get-excited" src="/images/25-i-get-excited.png">
+		<img id="slide-26-the-woes" src="/images/26-the-woes.png">
+		<img id="slide-27-carmel" src="/images/27-carmel.png">
+		<img id="slide-28-everything-works" src="/images/28-everything-works.png">
+		<img id="slide-29-aframe-history-1" src="/images/29-aframe-history-1.png">
+		<img id="slide-30-aframe-history-2" src="/images/30-aframe-history-2.png">
+		<img id="slide-31-aframe" src="/images/31-aframe.png">
+		<img id="slide-32-aframe-detail" src="/images/32-aframe-detail.png">
+		<img id="slide-33-entity-1" src="/images/33-entity-1.png">
+		<img id="slide-34-entity-2" src="/images/34-entity-2.png">
+		<img id="slide-35-component-1" src="/images/35-component-1.png">
+		<img id="slide-36-component-2" src="/images/36-component-2.png">
+		<img id="slide-37-component-2" src="/images/37-component-2.png">
+		<img id="slide-38-system-2" src="/images/38-system-2.png">
+		<img id="slide-39-system-1" src="/images/39-system-1.png">
+		<img id="slide-40-system-2" src="/images/40-system-2.png">
+		<img id="slide-41-scene" src="/images/41-scene.png">
+		<img id="slide-42-scene-2" src="/images/42-scene-2.png">
+		<img id="slide-43-start-building" src="/images/43-start-building.png">
+		<img id="slide-44-3d-basics" src="/images/44-3d-basics.png">
+		<img id="slide-45-lights" src="/images/45-lights.png">
+		<img id="slide-46-camera" src="/images/46-camera.png">
+		<img id="slide-47-camera-2" src="/images/47-camera-2.png">
+		<img id="slide-48-box" src="/images/48-box.png">
+		<img id="slide-49-first-scene" src="/images/49-first-scene.png">
+		<img id="slide-50-all-together" src="/images/50-all-together.png">
+		<img id="slide-51-scene" src="/images/51-scene.png">
+		<img id="slide-52-lights" src="/images/52-lights.png">
+		<img id="slide-53-camera" src="/images/53-camera.png">
+		<img id="slide-54-action" src="/images/54-action.png">
+		<img id="slide-55-output" src="/images/55-output.png">
+		<img id="slide-56-more-lights" src="/images/56-more-lights.png">
+		<img id="slide-57-more-output" src="/images/57-more-output.png">
+		<img id="slide-58-add-floor" src="/images/58-add-floor.png">
+		<img id="slide-59-with-floor" src="/images/59-with-floor.png">
+		<img id="slide-60-its-not-pretty" src="/images/60-its-not-pretty.png">
+		<img id="slide-61-textures" src="/images/61-textures.png">
+		<img id="slide-62-add-texture" src="/images/62-add-texture.png">
+		<img id="slide-63-with-texture" src="/images/63-with-texture.png">
+		<img id="slide-64-add-rotate" src="/images/64-add-rotate.png">
+		<img id="slide-65-model" src="/images/65-model.png">
+		<img id="slide-66-models-code" src="/images/66-models-code.png">
+		<img id="slide-67-models-added" src="/images/67-models-added.png">
+		<img id="slide-68-sky" src="/images/68-sky.png">
+		<img id="slide-69-see-sky" src="/images/69-see-sky.png">
+		<img id="slide-70-other-primitives" src="/images/70-other-primitives.png">
+		<img id="slide-71-more-primitive" src="/images/71-more-primitive.png">
+		<img id="slide-72-aframe-resources" src="/images/72-aframe-resources.png">
+		<img id="slide-73-built-in-aframe" src="/images/73-built-in-aframe.png">
+		<img id="slide-74-fun" src="/images/74-fun.png">
+		<img id="slide-75-good-enough" src="/images/75-good-enough.png">
+		<img id="slide-76-thanks" src="/images/76-thanks.png">
+	</a-assets>
+	<a-entity class="slide" id="slide-1" data-cameraposition="0 3.8 0" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="1"
+			position="0 0.5 0"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-1-stevie"
+				 width="10"
+				 height="5"
+				 position="0 1 0"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-2" data-cameraposition="0 4.8 5" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="2"
+			position="0 1 5"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-2-topics"
+				 width="10"
+				 height="5"
+				 position="0 2 5"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-3" data-cameraposition="0 5.8 10" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="3"
+			position="0 1.5 10"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-3-what-is-vr"
+				 width="10"
+				 height="5"
+				 position="0 3 10"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-4" data-cameraposition="0 6.8 15" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="4"
+			position="0 2 15"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-4-what-is-vr-2"
+				 width="10"
+				 height="5"
+				 position="0 4 15"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-5" data-cameraposition="0 7.8 20" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="5"
+			position="0 2.5 20"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-5-what-is-vr-3"
+				 width="10"
+				 height="5"
+				 position="0 5 20"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-6" data-cameraposition="0 8.8 25" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="6"
+			position="0 3 25"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-6-why-i-love"
+				 width="10"
+				 height="5"
+				 position="0 6 25"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-7" data-cameraposition="0 9.8 30" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="7"
+			position="0 3.5 30"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-7-web-sharing"
+				 width="10"
+				 height="5"
+				 position="0 7 30"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-8" data-cameraposition="0 10.8 35" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="8"
+			position="0 4 35"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-8-vr-allows"
+				 width="10"
+				 height="5"
+				 position="0 8 35"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-9" data-cameraposition="0 11.8 40" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="9"
+			position="0 4.5 40"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-9-imagination-in-your"
+				 width="10"
+				 height="5"
+				 position="0 9 40"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-10" data-cameraposition="0 12.8 45" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="10"
+			position="0 5 45"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-10-imagination-on-heads"
+				 width="10"
+				 height="5"
+				 position="0 10 45"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-11" data-cameraposition="0 13.8 50" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="11"
+			position="0 5.5 50"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-11-getting-here"
+				 width="10"
+				 height="5"
+				 position="0 11 50"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-12" data-cameraposition="0 14.8 55" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="12"
+			position="0 6 55"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-12-science-fiction"
+				 width="10"
+				 height="5"
+				 position="0 12 55"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-13" data-cameraposition="0 15.8 60" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="13"
+			position="0 6.5 60"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-13-some-non-vr"
+				 width="10"
+				 height="5"
+				 position="0 13 60"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-14" data-cameraposition="0 16.8 65" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="14"
+			position="0 7 65"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-14-viewmaster"
+				 width="10"
+				 height="5"
+				 position="0 14 65"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-15" data-cameraposition="0 17.8 70" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="15"
+			position="0 7.5 70"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-15-science-fact"
+				 width="10"
+				 height="5"
+				 position="0 15 70"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-16" data-cameraposition="0 18.8 75" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="16"
+			position="0 8 75"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-16-damocles"
+				 width="10"
+				 height="5"
+				 position="0 16 75"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-17" data-cameraposition="0 19.8 80" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="17"
+			position="0 8.5 80"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-17-more-history"
+				 width="10"
+				 height="5"
+				 position="0 17 80"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-18" data-cameraposition="0 20.8 85" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="18"
+			position="0 9 85"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-18-vr-on-web"
+				 width="10"
+				 height="5"
+				 position="0 18 85"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-19" data-cameraposition="0 21.8 90" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="19"
+			position="0 9.5 90"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-19-vrml"
+				 width="10"
+				 height="5"
+				 position="0 19 90"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-20" data-cameraposition="0 22.8 95" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="20"
+			position="0 10 95"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-20-x3d"
+				 width="10"
+				 height="5"
+				 position="0 20 95"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-21" data-cameraposition="0 23.8 100" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="21"
+			position="0 10.5 100"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-21-o3d"
+				 width="10"
+				 height="5"
+				 position="0 21 100"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-22" data-cameraposition="0 24.8 105" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="22"
+			position="0 11 105"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-22-webgl"
+				 width="10"
+				 height="5"
+				 position="0 22 105"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-23" data-cameraposition="0 25.8 110" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="23"
+			position="0 11.5 110"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-23-glam"
+				 width="10"
+				 height="5"
+				 position="0 23 110"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-24" data-cameraposition="0 26.8 115" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="24"
+			position="0 12 115"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-24-react-vr"
+				 width="10"
+				 height="5"
+				 position="0 24 115"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-25" data-cameraposition="0 27.8 120" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="25"
+			position="0 12.5 120"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-25-i-get-excited"
+				 width="10"
+				 height="5"
+				 position="0 25 120"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-26" data-cameraposition="0 28.8 125" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="26"
+			position="0 13 125"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-26-the-woes"
+				 width="10"
+				 height="5"
+				 position="0 26 125"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-27" data-cameraposition="0 29.8 130" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="27"
+			position="0 13.5 130"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-27-carmel"
+				 width="10"
+				 height="5"
+				 position="0 27 130"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-28" data-cameraposition="0 30.8 135" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="28"
+			position="0 14 135"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-28-everything-works"
+				 width="10"
+				 height="5"
+				 position="0 28 135"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-29" data-cameraposition="0 31.8 140" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="29"
+			position="0 14.5 140"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-29-aframe-history-1"
+				 width="10"
+				 height="5"
+				 position="0 29 140"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-30" data-cameraposition="0 32.8 145" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="30"
+			position="0 15 145"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-30-aframe-history-2"
+				 width="10"
+				 height="5"
+				 position="0 30 145"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-31" data-cameraposition="0 33.8 150" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="31"
+			position="0 15.5 150"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-31-aframe"
+				 width="10"
+				 height="5"
+				 position="0 31 150"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-32" data-cameraposition="0 34.8 155" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="32"
+			position="0 16 155"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-32-aframe-detail"
+				 width="10"
+				 height="5"
+				 position="0 32 155"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-33" data-cameraposition="0 35.8 160" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="33"
+			position="0 16.5 160"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-33-entity-1"
+				 width="10"
+				 height="5"
+				 position="0 33 160"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-34" data-cameraposition="0 36.8 165" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="34"
+			position="0 17 165"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-34-entity-2"
+				 width="10"
+				 height="5"
+				 position="0 34 165"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-35" data-cameraposition="0 37.8 170" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="35"
+			position="0 17.5 170"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-35-component-1"
+				 width="10"
+				 height="5"
+				 position="0 35 170"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-36" data-cameraposition="0 38.8 175" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="36"
+			position="0 18 175"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-36-component-2"
+				 width="10"
+				 height="5"
+				 position="0 36 175"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-37" data-cameraposition="0 39.8 180" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="37"
+			position="0 18.5 180"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-37-component-2"
+				 width="10"
+				 height="5"
+				 position="0 37 180"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-38" data-cameraposition="0 40.8 185" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="38"
+			position="0 19 185"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-38-system-2"
+				 width="10"
+				 height="5"
+				 position="0 38 185"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-39" data-cameraposition="0 41.8 190" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="39"
+			position="0 19.5 190"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-39-system-1"
+				 width="10"
+				 height="5"
+				 position="0 39 190"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-40" data-cameraposition="0 42.8 195" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="40"
+			position="0 20 195"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-40-system-2"
+				 width="10"
+				 height="5"
+				 position="0 40 195"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-41" data-cameraposition="0 43.8 200" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="41"
+			position="0 20.5 200"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-41-scene"
+				 width="10"
+				 height="5"
+				 position="0 41 200"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-42" data-cameraposition="0 44.8 205" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="42"
+			position="0 21 205"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-42-scene-2"
+				 width="10"
+				 height="5"
+				 position="0 42 205"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-43" data-cameraposition="0 45.8 210" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="43"
+			position="0 21.5 210"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-43-start-building"
+				 width="10"
+				 height="5"
+				 position="0 43 210"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-44" data-cameraposition="0 46.8 215" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="44"
+			position="0 22 215"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-44-3d-basics"
+				 width="10"
+				 height="5"
+				 position="0 44 215"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-45" data-cameraposition="0 47.8 220" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="45"
+			position="0 22.5 220"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-45-lights"
+				 width="10"
+				 height="5"
+				 position="0 45 220"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-46" data-cameraposition="0 48.8 225" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="46"
+			position="0 23 225"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-46-camera"
+				 width="10"
+				 height="5"
+				 position="0 46 225"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-47" data-cameraposition="0 49.8 230" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="47"
+			position="0 23.5 230"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-47-camera-2"
+				 width="10"
+				 height="5"
+				 position="0 47 230"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-48" data-cameraposition="0 50.8 235" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="48"
+			position="0 24 235"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-48-box"
+				 width="10"
+				 height="5"
+				 position="0 48 235"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-49" data-cameraposition="0 51.8 240" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="49"
+			position="0 24.5 240"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-49-first-scene"
+				 width="10"
+				 height="5"
+				 position="0 49 240"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-50" data-cameraposition="0 52.8 245" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="50"
+			position="0 25 245"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-50-all-together"
+				 width="10"
+				 height="5"
+				 position="0 50 245"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-51" data-cameraposition="0 53.8 250" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="51"
+			position="0 25.5 250"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-51-scene"
+				 width="10"
+				 height="5"
+				 position="0 51 250"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-52" data-cameraposition="0 54.8 255" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="52"
+			position="0 26 255"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-52-lights"
+				 width="10"
+				 height="5"
+				 position="0 52 255"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-53" data-cameraposition="0 55.8 260" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="53"
+			position="0 26.5 260"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-53-camera"
+				 width="10"
+				 height="5"
+				 position="0 53 260"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-54" data-cameraposition="0 56.8 265" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="54"
+			position="0 27 265"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-54-action"
+				 width="10"
+				 height="5"
+				 position="0 54 265"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-55" data-cameraposition="0 57.8 270" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="55"
+			position="0 27.5 270"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-55-output"
+				 width="10"
+				 height="5"
+				 position="0 55 270"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-56" data-cameraposition="0 58.8 275" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="56"
+			position="0 28 275"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-56-more-lights"
+				 width="10"
+				 height="5"
+				 position="0 56 275"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-57" data-cameraposition="0 59.8 280" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="57"
+			position="0 28.5 280"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-57-more-output"
+				 width="10"
+				 height="5"
+				 position="0 57 280"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-58" data-cameraposition="0 60.8 285" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="58"
+			position="0 29 285"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-58-add-floor"
+				 width="10"
+				 height="5"
+				 position="0 58 285"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-59" data-cameraposition="0 61.8 290" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="59"
+			position="0 29.5 290"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-59-with-floor"
+				 width="10"
+				 height="5"
+				 position="0 59 290"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-60" data-cameraposition="0 62.8 295" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="60"
+			position="0 30 295"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-60-its-not-pretty"
+				 width="10"
+				 height="5"
+				 position="0 60 295"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-61" data-cameraposition="0 63.8 300" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="61"
+			position="0 30.5 300"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-61-textures"
+				 width="10"
+				 height="5"
+				 position="0 61 300"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-62" data-cameraposition="0 64.8 305" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="62"
+			position="0 31 305"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-62-add-texture"
+				 width="10"
+				 height="5"
+				 position="0 62 305"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-63" data-cameraposition="0 65.8 310" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="63"
+			position="0 31.5 310"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-63-with-texture"
+				 width="10"
+				 height="5"
+				 position="0 63 310"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-64" data-cameraposition="0 66.8 315" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="64"
+			position="0 32 315"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-64-add-rotate"
+				 width="10"
+				 height="5"
+				 position="0 64 315"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-65" data-cameraposition="0 67.8 320" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="65"
+			position="0 32.5 320"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-65-model"
+				 width="10"
+				 height="5"
+				 position="0 65 320"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-66" data-cameraposition="0 68.8 325" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="66"
+			position="0 33 325"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-66-models-code"
+				 width="10"
+				 height="5"
+				 position="0 66 325"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-67" data-cameraposition="0 69.8 330" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="67"
+			position="0 33.5 330"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-67-models-added"
+				 width="10"
+				 height="5"
+				 position="0 67 330"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-68" data-cameraposition="0 70.8 335" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="68"
+			position="0 34 335"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-68-sky"
+				 width="10"
+				 height="5"
+				 position="0 68 335"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-69" data-cameraposition="0 71.8 340" data-camerarotation="0 90 0">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="69"
+			position="0 34.5 340"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-69-see-sky"
+				 width="10"
+				 height="5"
+				 position="0 69.01 340"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-70" data-cameraposition="0 72.8 345" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="70"
+			position="0 35 345"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-70-other-primitives"
+				 width="10"
+				 height="5"
+				 position="0 70 345"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-71" data-cameraposition="0 73.8 350" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="71"
+			position="0 35.5 350"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-71-more-primitive"
+				 width="10"
+				 height="5"
+				 position="0 71 350"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-72" data-cameraposition="0 74.8 355" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="72"
+			position="0 36 355"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-72-aframe-resources"
+				 width="10"
+				 height="5"
+				 position="0 72 355"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-73" data-cameraposition="0 75.8 360" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="73"
+			position="0 36.5 360"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-73-built-in-aframe"
+				 width="10"
+				 height="5"
+				 position="0 73 360"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-74" data-cameraposition="0 76.8 365" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="74"
+			position="0 37 365"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-74-fun"
+				 width="10"
+				 height="5"
+				 position="0 74 365"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-75" data-cameraposition="0 77.8 370" data-camerarotation="270 270 90">
+		<a-box
+			static-body
+			width="10"
+			height="5"
+			depth="75"
+			position="0 37.5 370"
+			rotation="270 270 90"></a-box>
+
+		<a-image src="#slide-75-good-enough"
+				 width="10"
+				 height="5"
+				 position="0 75 370"
+				 rotation="270 270 90"></a-image>
+	</a-entity>
+	<a-entity class="slide" id="slide-76" data-cameraposition="0 77.8 370" data-camerarotation="-10 0 0">
+		<a-image id="finalslide" src="#slide-76-thanks"
+				 width="500"
+				 height="250"
+				 position="0 -1150 0"
+				 rotation="0 0 0"></a-image>
+	</a-entity>
+</a-scene>
+</body>
+</html>
