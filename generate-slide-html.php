@@ -8,7 +8,7 @@ echo '<!doctype html>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="/production/js/main.js"></script>
+	<script src="production/js/main.js"></script>
 	<title>Hands on with A-Frame</title>
 </head>
 <body>
@@ -27,17 +27,16 @@ $sortedFiles = [];
 
 echo '
 	<a-assets>
-		<img id="stevie" src="/images/examples/stevie.png" />
-		<img id="sky" src="/images/examples/sky-one.jpg" />
-		<a-asset-item id="tree1" src="/images/examples/tree1.dae"></a-asset-item>
-		<a-asset-item id="tree2" src="/images/examples/tree2.dae"></a-asset-item>
-		<a-asset-item id="crate-mtl" src="/images/examples/crate.mtl"></a-asset-item>
-		<a-asset-item id="crate-obj" src="/images/examples/crate.obj"></a-asset-item>
+		<img id="stevie" src="images/examples/stevie.png" />
+		<img id="sky" src="images/examples/sky-one.jpg" />
+		<a-asset-item id="tree1" src="images/examples/tree1.dae"></a-asset-item>
+		<a-asset-item id="tree2" src="images/examples/tree2.dae"></a-asset-item>
+		<a-asset-item id="crate-mtl" src="images/examples/crate.mtl"></a-asset-item>
+		<a-asset-item id="crate-obj" src="images/examples/crate.obj"></a-asset-item>
 		<a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
 ';
 foreach ($files as $number => $filename) {
 
-    $filename = '/' . $filename;
     $parts = preg_split('|/+|', $filename);
     $filename = array_pop($parts);
 
@@ -46,7 +45,7 @@ foreach ($files as $number => $filename) {
     }
     $sortedFiles[] = $filename;
 
-    echo '		<img id="slide-'.$filename.'" src="/'.$files[$number].'">
+    echo '		<img id="slide-'.$filename.'" src="'.$files[$number].'">
 ';
 
 }
